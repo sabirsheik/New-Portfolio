@@ -73,9 +73,9 @@ const Contact = () => {
     };
 
     return (
-        <div ref={sectionRef} className="p-4 lg:w-3/4 mx-auto overflow-x-hidden overflow-y-hidden mt-10" id="contact">
+        <div ref={sectionRef} className="p-4 lg:w-3/4 mx-auto overflow-x-hidden overflow-y-hidden" id="contact">
             {/* Header Section */}
-            <h2 className="my-8 text-center text-4xl tracking-tight">Let's Connect</h2>
+            <h2 className="my-8 text-center text-4xl tracking-tight mt-14">Let's Connect</h2>
 
             {/* Form Section */}
             <div className="w-full max-w-4xl mx-auto">
