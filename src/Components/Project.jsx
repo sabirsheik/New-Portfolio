@@ -21,7 +21,7 @@ const Project = () => {
   return (
     <>
       <section className="px-10 py-12 overflow-x-hidden overflow-y-hidden" id="work">
-        <h1 style={{fontSize:"2.25rem"}} className=" md:text-6xl font-medium tracking-tight mt-10  mb-10">
+        <h1  className="text-4xl md:text-6xl font-medium tracking-tight mt-10  mb-10">
             Work
             </h1>
             <div className="h-1 w-20 mb-8 bg-white"></div>
