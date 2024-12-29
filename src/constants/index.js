@@ -72,8 +72,8 @@ export const PROJECTS = [
 
 export const ABOUT_CONTENT = {
   paragraphs: [
-    "I am a dedicated frontend developer with a passion for building modern web applications that are both functional and aesthetically pleasing. Over the years, I have worked on numerous projects ranging from single-page applications to complex multi-tiered systems, always ensuring high performance and seamless user experiences.",
-    "I specialize in using technologies like React, Next.js, and Tailwind CSS to create responsive and scalable interfaces. My focus is on writing clean, maintainable code while collaborating with cross-functional teams to deliver projects that meet both business goals and user needs. I thrive in environments that challenge me to continuously learn and grow.",
+    "I am a Full-Stack Developer specializing in the MERN stack (MongoDB, Express.js, React, Node.js). I am passionate about building dynamic and scalable web applications that provide seamless user experiences.",
+    "Focused on continuous learning and improvement, I stay up to date with the latest technologies to deliver high-quality solutions. I enjoy working in collaborative environments and am driven to create innovative products that meet both business and user needs.",
   ],
 };
 
