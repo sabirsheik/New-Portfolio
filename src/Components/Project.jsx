@@ -14,23 +14,23 @@ const Project = () => {
           rotate: 0,
           y: 0,
           transition: {
-            duration: 0.8,
+            duration: 0.6, // Reduced duration for smoother animations
             ease: "easeOut",
             type: "spring",
-            bounce: 0.5,
+            bounce: 0.4, // Reduced bounce for less abrupt movement
           },
         },
       };
     }
 
-    // Mobile-specific animations (alternate left/right for each project)
+    // Mobile-specific animations (simpler for better performance)
     return {
-      hidden: { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
+      hidden: { opacity: 0, x: index % 2 === 0 ? -80 : 80 },
       visible: {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 0.8,
+          duration: 0.5, // Shorter duration for mobile
           ease: "easeOut",
         },
       },
@@ -38,7 +38,7 @@ const Project = () => {
   };
 
   return (
-    <section className="px-10 py-12 overflow-x-hidden overflow-y-hidden" id="work">
+    <section className="px-6 md:px-10 py-12 overflow-hidden" id="work">
       <h1 className="text-4xl md:text-6xl font-medium tracking-tight mt-10 mb-10">
         Work
       </h1>
@@ -47,7 +47,7 @@ const Project = () => {
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
-            className="relative rounded-lg overflow-hidden h-[500px] transition transform"
+            className="relative rounded-lg overflow-hidden h-[400px] md:h-[500px] transition-transform"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -56,17 +56,20 @@ const Project = () => {
             <img
               src={project.image}
               alt={project.name}
-              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy" // Lazy loading for better performance
             />
             <div className="relative z-20 p-6 flex flex-col justify-between h-full bg-black/30 text-white">
               <h2 className="text-2xl font-medium mb-4">{project.name}</h2>
               <div className="flex flex-col justify-between">
-                <p className="mb-4 flex-grow text-2xl">{project.description}</p>
+                <p className="mb-4 flex-grow text-md md:text-xl">
+                  {project.description}
+                </p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-stone-900 rounded-full py-2 px-2 w-32 text-center"
+                  className="bg-white text-stone-900 rounded-full py-2 px-4 text-center"
                 >
                   View On GitHub
                 </a>
