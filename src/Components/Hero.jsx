@@ -3,36 +3,41 @@ import { HERO_CONTENT } from "../constants";
 import Sabir from "../assets/Sabir.jpg";
 
 const Hero = () => {
-  const isMobile = window.innerWidth < 768; // Check if the device is mobile
-
-  // Text animation variants (animate from below)
+  const isMobile = window.innerWidth < 768; 
   const textVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeInOut" },
+      transition: {
+        duration: 1, 
+        ease: "easeOut", 
+      },
     },
   };
-
-  // Image animation variants (animate from below and scale)
-  const imageVariants = isMobile
+ const imageVariants = isMobile
     ? {
         hidden: { opacity: 0, y: 50, scale: 0.9 },
         visible: {
           opacity: 1,
           y: 0,
           scale: 1,
-          transition: { duration: 1, ease: "easeInOut" },
+          transition: {
+            duration: 1.2, 
+            ease: "easeOut", 
+          },
         },
       }
     : {
-        hidden: { opacity: 0, y: 50, scale: 0.8 },
+        hidden: { opacity: 0, y: 100, scale: 0.8 },
         visible: {
           opacity: 1,
           y: 0,
           scale: 1,
-          transition: { duration: 1, ease: "easeInOut" },
+          transition: {
+            duration: 1.2, 
+            ease: "easeOut", 
+          },
         },
       };
 
@@ -43,7 +48,7 @@ const Hero = () => {
         className="w-full md:w-1/2 p-6 md:p-12"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }} // Trigger animation when the element is visible in the viewport
+        viewport={{ once: false, amount: 0.2 }} 
         variants={textVariants}
       >
         <h1 className="text-lg md:text-2xl lg:text-3xl my-10">{HERO_CONTENT.greeting}</h1>
@@ -64,7 +69,7 @@ const Hero = () => {
         className="w-full md:w-1/2 pt-10 flex justify-center items-center md:ml-14"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }} // Trigger animation when the element is visible in the viewport
+        viewport={{ once: false, amount: 0.2 }} 
         variants={imageVariants}
       >
         <img
