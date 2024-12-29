@@ -3,7 +3,7 @@ import { ABOUT_CONTENT } from "../constants/index";
 
 const About = () => {
     const textVariants = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 220 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
     };
 

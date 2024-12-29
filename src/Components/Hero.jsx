@@ -40,7 +40,7 @@ const Hero = () => {
     <div className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-6 py-12 mx-auto max-w-6xl">
       {/* Text Section */}
       <motion.div
-        className="w-full md:w-1/2 p-8"
+        className="w-full md:w-1/2 p-6 md:p-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }} // Trigger animation when the element is visible in the viewport
@@ -61,7 +61,7 @@ const Hero = () => {
 
       {/* Image Section */}
       <motion.div
-        className="w-full md:w-1/2 p-8 flex justify-center items-center ml-14"
+        className="w-full md:w-1/2 pt-10 flex justify-center items-center md:ml-14"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }} // Trigger animation when the element is visible in the viewport
