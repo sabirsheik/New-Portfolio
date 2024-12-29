@@ -4,7 +4,6 @@ import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Footer from './Components/Footer';
 
-// Lazy 
 const Project = React.lazy(() => import('./Components/Project'));
 const About = React.lazy(() => import('./Components/About'));
 const Experience = React.lazy(() => import('./Components/Experience'));
@@ -16,9 +15,7 @@ const App = () => {
     <>
       <BlurBackground />
       <Navbar />
-      <main
-        className="max-w-7xl mx-auto relative z-10"
-      >
+      <main className="max-w-7xl mx-auto relative z-10">
         <Hero />
       </main>
       <Suspense fallback={<div className="text-center">Loading...</div>}>
