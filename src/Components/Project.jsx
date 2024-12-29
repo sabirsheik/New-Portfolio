@@ -7,14 +7,15 @@ const Project = () => {
   // Define animation variants
   const getVariants = (index) => {
     if (!isMobile) {
+      // Desktop animation: Vertical (Y-axis)
       return {
         hidden: {
           opacity: 0,
-          transform: "translateY(50px) scale(0.9)",
+          transform: "translateY(50px) scale(0.9)", // Slide from bottom
         },
         visible: {
           opacity: 1,
-          transform: "translateY(0) scale(1)",
+          transform: "translateY(0) scale(1)", // Normal position
           transition: {
             duration: 0.7,
             ease: "easeInOut",
@@ -24,15 +25,15 @@ const Project = () => {
       };
     }
 
-    // Mobile-specific animations
+    // Mobile animation: Horizontal (X-axis)
     return {
       hidden: {
         opacity: 0,
-        transform: `translateX(${index % 2 === 0 ? "-20px" : "20px"})`,
+        transform: `translateX(${index % 2 === 0 ? "-20px" : "20px"})`, // Slide from left or right
       },
       visible: {
         opacity: 1,
-        transform: "translateX(0)",
+        transform: "translateX(0)", // Normal position
         transition: {
           duration: 0.6,
           ease: "easeInOut",
@@ -55,11 +56,11 @@ const Project = () => {
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
-            className="relative rounded-lg overflow-hidden h-[400px] md:h-[500px] transition-transform"
+            className="relative rounded-lg overflow-hidden h-[400px] md:h-[500px] transition-transform transform hover:scale-105 focus:scale-105 hover:cursor-pointer"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={getVariants(index)}
+            viewport={{ once: false, amount: 0.2 }} // Ensures it works for scrolling in and out
+            variants={getVariants(index)} // Apply appropriate variant
           >
             {/* Project Image */}
             <img

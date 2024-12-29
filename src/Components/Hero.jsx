@@ -5,44 +5,49 @@ import Sabir from "../assets/Sabir.jpg";
 const Hero = () => {
   const isMobile = window.innerWidth < 768; // Check if the device is mobile
 
-  const textVariants = !isMobile
-    ? {
-        hidden: { opacity: 0, x: -50 },
-        visible: {
-          opacity: 1,
-          x: 0,
-          transition: { duration: 0.8, ease: "easeOut" },
-        },
-      }
-    : {};
+  // Text animation variants (animate from below)
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
 
-  const imageVariants = !isMobile
+  // Image animation variants (animate from below and scale)
+  const imageVariants = isMobile
     ? {
-        hidden: { opacity: 0, x: 50 },
+        hidden: { opacity: 0, y: 50, scale: 0.9 },
         visible: {
           opacity: 1,
-          x: 0,
-          transition: { duration: 0.8, ease: "easeOut" },
+          y: 0,
+          scale: 1,
+          transition: { duration: 1, ease: "easeInOut" },
         },
       }
-    : {};
+    : {
+        hidden: { opacity: 0, y: 50, scale: 0.8 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          transition: { duration: 1, ease: "easeInOut" },
+        },
+      };
 
   return (
-    <div className="mt-50 mt-12 relative z-10 min-h-screen flex flex-col md:flex-row max-w-6xl mx-auto items-center justify-center text-white">
+    <div className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-6 py-12 mx-auto max-w-6xl">
       {/* Text Section */}
       <motion.div
         className="w-full md:w-1/2 p-8"
-        initial={!isMobile ? "hidden" : undefined}
-        whileInView={!isMobile ? "visible" : undefined}
-        viewport={!isMobile ? { once: true, amount: 0.2 } : undefined}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }} // Trigger animation when the element is visible in the viewport
         variants={textVariants}
       >
-        <h1 className="text-lg md:text-2xl lg:text-3xl my-10">
-          {HERO_CONTENT.greeting}
-        </h1>
-        <p className="text-md md:text-lg lg:text-xl mb-6">
-          {HERO_CONTENT.introduction}
-        </p>
+        <h1 className="text-lg md:text-2xl lg:text-3xl my-10">{HERO_CONTENT.greeting}</h1>
+        <p className="text-md md:text-lg lg:text-xl mb-6">{HERO_CONTENT.introduction}</p>
         <a
           className="bg-stone-50 text-stone-900 p-3 lg:p-4 mt-8 inline-block rounded-2xl text-xs md:text-sm"
           href={HERO_CONTENT.resumeLink}
@@ -56,10 +61,10 @@ const Hero = () => {
 
       {/* Image Section */}
       <motion.div
-        className="w-full md:w-1/2 p-8"
-        initial={!isMobile ? "hidden" : undefined}
-        whileInView={!isMobile ? "visible" : undefined}
-        viewport={!isMobile ? { once: true, amount: 0.2 } : undefined}
+        className="w-full md:w-1/2 p-8 flex justify-center items-center ml-14"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }} // Trigger animation when the element is visible in the viewport
         variants={imageVariants}
       >
         <img
