@@ -4,34 +4,39 @@ import { PROJECTS } from "../constants/index.js";
 const Project = () => {
   const isMobile = window.innerWidth < 768; // Check if the device is mobile
 
+  // Define animation variants
   const getVariants = (index) => {
     if (!isMobile) {
       return {
-        hidden: { opacity: 0, scale: 0.8, rotate: -40, y: 50 },
+        hidden: {
+          opacity: 0,
+          transform: "translateY(50px) scale(0.9)",
+        },
         visible: {
           opacity: 1,
-          scale: 1,
-          rotate: 0,
-          y: 0,
+          transform: "translateY(0) scale(1)",
           transition: {
-            duration: 0.6, // Reduced duration for smoother animations
-            ease: "easeOut",
-            type: "spring",
-            bounce: 0.4, // Reduced bounce for less abrupt movement
+            duration: 0.7,
+            ease: "easeInOut",
+            delay: index * 0.1, // Slight stagger for desktop
           },
         },
       };
     }
 
-    // Mobile-specific animations (simpler for better performance)
+    // Mobile-specific animations
     return {
-      hidden: { opacity: 0, x: index % 2 === 0 ? -80 : 80 },
+      hidden: {
+        opacity: 0,
+        transform: `translateX(${index % 2 === 0 ? "-20px" : "20px"})`,
+      },
       visible: {
         opacity: 1,
-        x: 0,
+        transform: "translateX(0)",
         transition: {
-          duration: 0.5, // Shorter duration for mobile
-          ease: "easeOut",
+          duration: 0.6,
+          ease: "easeInOut",
+          delay: index * 0.1, // Slight stagger for mobile
         },
       },
     };
@@ -39,10 +44,13 @@ const Project = () => {
 
   return (
     <section className="px-6 md:px-10 py-12 overflow-hidden" id="work">
+      {/* Title */}
       <h1 className="text-4xl md:text-6xl font-medium tracking-tight mt-10 mb-10">
         Work
       </h1>
       <div className="h-1 w-20 mb-8 bg-white"></div>
+
+      {/* Project Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {PROJECTS.map((project, index) => (
           <motion.div
@@ -53,12 +61,15 @@ const Project = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={getVariants(index)}
           >
+            {/* Project Image */}
             <img
               src={project.image}
               alt={project.name}
               className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy" // Lazy loading for better performance
+              loading="lazy" // Optimized for performance
             />
+
+            {/* Overlay Content */}
             <div className="relative z-20 p-6 flex flex-col justify-between h-full bg-black/30 text-white">
               <h2 className="text-2xl font-medium mb-4">{project.name}</h2>
               <div className="flex flex-col justify-between">
