@@ -2,46 +2,25 @@ import { motion } from "framer-motion";
 import { PROJECTS } from "../constants/index.js";
 
 const Project = () => {
-  const isMobile = window.innerWidth < 768; // Check if the device is mobile
+  const isMobile = window.innerWidth < 768;
 
-  // Define animation variants
-  const getVariants = (index) => {
-    if (!isMobile) {
-      // Desktop animation: Vertical (Y-axis)
-      return {
-        hidden: {
-          opacity: 0,
-          transform: "translateY(50px) scale(0.9)", // Slide from bottom
-        },
-        visible: {
-          opacity: 1,
-          transform: "translateY(0) scale(1)", // Normal position
-          transition: {
-            duration: 0.8, // Slightly increased for smoother effect
-            ease: "easeOut", // Smooth deceleration
-            delay: index * 0.15, // Increased stagger for better spacing
-          },
-        },
-      };
-    }
-
-    // Mobile animation: Horizontal (X-axis)
-    return {
-      hidden: {
-        opacity: 0,
-        transform: `translateX(${index % 2 === 0 ? "-30px" : "30px"})`, // Slide from left or right
+  const getVariants = (index) => ({
+    hidden: {
+      opacity: 0,
+      transform: isMobile
+        ? `translateX(${index % 2 === 0 ? "-30px" : "30px"})`
+        : "translateY(50px) scale(0.9)", 
+    },
+    visible: {
+      opacity: 1,
+      transform: "translateX(0) scale(1)", 
+      transition: {
+        duration: 0.8, 
+        ease: "easeOut",
+        delay: index * 0.1, 
       },
-      visible: {
-        opacity: 1,
-        transform: "translateX(0)", // Normal position
-        transition: {
-          duration: 0.7, // Faster for mobile
-          ease: "easeOut",
-          delay: index * 0.1, // Smaller stagger for compact layout
-        },
-      },
-    };
-  };
+    },
+  });
 
   return (
     <section className="px-6 md:px-10 py-12 overflow-hidden" id="work">
@@ -56,18 +35,18 @@ const Project = () => {
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
-            className="relative rounded-lg overflow-hidden h-[400px] md:h-[500px] transition-transform transform hover:scale-105 focus:scale-105 hover:cursor-pointer"
+            className="relative rounded-lg overflow-hidden h-[400px] md:h-[500px] will-change-transform transition-transform transform hover:scale-105 focus:scale-105 hover:cursor-pointer"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }} // Ensures it works for scrolling in and out
-            variants={getVariants(index)} // Apply appropriate variant
+            whileInView="visible" 
+            viewport={{ once: false, amount: 0.2 }} 
+            variants={getVariants(index)} 
           >
             {/* Project Image */}
             <img
               src={project.image}
               alt={project.name}
               className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy" // Optimized for performance
+              loading="lazy"
             />
 
             {/* Overlay Content */}
