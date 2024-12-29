@@ -17,9 +17,9 @@ const Project = () => {
           opacity: 1,
           transform: "translateY(0) scale(1)", // Normal position
           transition: {
-            duration: 0.7,
-            ease: "easeInOut",
-            delay: index * 0.1, // Slight stagger for desktop
+            duration: 0.8, // Slightly increased for smoother effect
+            ease: "easeOut", // Smooth deceleration
+            delay: index * 0.15, // Increased stagger for better spacing
           },
         },
       };
@@ -29,15 +29,15 @@ const Project = () => {
     return {
       hidden: {
         opacity: 0,
-        transform: `translateX(${index % 2 === 0 ? "-20px" : "20px"})`, // Slide from left or right
+        transform: `translateX(${index % 2 === 0 ? "-30px" : "30px"})`, // Slide from left or right
       },
       visible: {
         opacity: 1,
         transform: "translateX(0)", // Normal position
         transition: {
-          duration: 0.6,
-          ease: "easeInOut",
-          delay: index * 0.1, // Slight stagger for mobile
+          duration: 0.7, // Faster for mobile
+          ease: "easeOut",
+          delay: index * 0.1, // Smaller stagger for compact layout
         },
       },
     };
