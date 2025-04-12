@@ -49,10 +49,10 @@ const Contact = () => {
 
             emailjs
                 .sendForm(
-                     'service_pr5b43w',
-                    'template_6j0ivu8',
+                     'service_q45y50e',
+                    'template_ibl18vd',
                     e.target,
-                    'E3Mc1lIOH4T6q5PzK'
+                    'G3O5uK74c4TDZEODQ'
                 )
                 .then(() => {
                     alert('Message Sent Successfully');
