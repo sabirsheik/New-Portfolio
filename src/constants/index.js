@@ -56,7 +56,7 @@ export const PROJECTS = [
     name: "KFC Clone",
     description:
       "A static KFC clone website replicating the original design and layout for practice and presentation purposes.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxitPAuj1fO3AjlVtg27fBcQbMb6ekGxvIKA&s",
+    image: "https://i.postimg.cc/0yTnt5qg/projects4.png",
     link: "fc-project-sage.vercel.app",
     buttonText : "View KFC Clone"
   },
