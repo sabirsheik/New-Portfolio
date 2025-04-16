@@ -32,41 +32,46 @@ export const HERO_CONTENT = {
 
 export const PROJECTS = [
   {
-    name: "Streamerzz",
-    description: "Live stream management tool for content creators",
+    name: "Empolyee Management Tool",
+    description: "A powerful tool to efficiently manage employee records, roles, attendance, and performance in a centralized system.",
     image: projects1,
-    link: "https://github.com/your-github/streamerzz",
+    link: "https://github.com/sabirsheik/commingsoon",
+    buttonText : "View On GitHub"
   },
   {
-    name: "NutriTrack",
-    description: "Track your meals and calories with smart AI suggestions",
+    name: "Shoe Company",
+    description: "A stylish and dynamic landing page designed to showcase a shoe company's latest collections and boost online sales.",
     image: projects2,
-    link: "https://github.com/your-github/nutritrack",
+    link: "https://01-the-shoe-company.vercel.app/",
+    buttonText : "View Landing Page"
   },
   {
-    name: "HairRevive",
-    description: "A platform for hair regrowth solutions powered by science",
+    name: "3D Animated Portfolio",
+    description: "A visually captivating 3D animated portfolio showcasing skills, projects, and creativity in an interactive experience.",
     image: projects3,
-    link: "https://github.com/your-github/hairrevive",
+    link: "https://3-d-animated-portfolio-tau.vercel.app/",
+    buttonText : "View 3D Portfolio"
   },
   {
-    name: "DevDeck",
+    name: "KFC Clone",
     description:
-      "Interactive dashboard for developers to track coding activity",
+      "A static KFC clone website replicating the original design and layout for practice and presentation purposes.",
     image: projects4,
-    link: "https://github.com/your-github/devdeck",
+    link: "fc-project-sage.vercel.app",
+    buttonText : "View KFC Clone"
   },
   {
-    name: "FitConnect",
-    description: "Fitness social network to connect athletes and trainers",
+    name: "MERN Application",
+    description: "A full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) for seamless frontend and backend integration.",
     image: projects5,
-    link: "https://github.com/your-github/fitconnect",
+    link: "https://github.com/sabirsheik/commingsoon",
+    buttonText : "View On GitHub"
   },
   {
     name: "WellNest",
     description: "A wellness app for mental and physical health improvement",
     image: projects6,
-    link: "https://github.com/your-github/wellnest",
+    link: "https://github.com/sabirsheik/wellnest",
   },
 ];
 
