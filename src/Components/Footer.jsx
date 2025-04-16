@@ -33,7 +33,7 @@ const Footer = () => {
           transition={{ duration: 1, delay: 0.4 }} 
           className="mt-8 text-center tracking-tight text-sm text-gray-400"
         >
-          &copy; Sabir Portfolio. All rights reserved
+          &copy; 2025 Sabir Portfolio. All rights reserved
         </motion.p>
       </div>
     </>
