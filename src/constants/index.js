@@ -57,7 +57,7 @@ export const PROJECTS = [
     description:
       "A static KFC clone website replicating the original design and layout for practice and presentation purposes.",
     image: "https://i.postimg.cc/0yTnt5qg/projects4.png",
-    link: "fc-project-sage.vercel.app",
+    link: "https://kfc-project-sage.vercel.app/",
     buttonText : "View KFC Clone"
   },
   {
@@ -68,10 +68,11 @@ export const PROJECTS = [
     buttonText : "View On GitHub"
   },
   {
-    name: "WellNest",
-    description: "A wellness app for mental and physical health improvement",
+    name: "E-Commerce Application",
+    description: "An e-commerce application is a platform that enables users to buy and sell products or services online with features like product listings, shopping carts, and secure payment processing.",
     image: projects6,
-    link: "https://github.com/sabirsheik/wellnest",
+    link: "https://github.com/sabirsheik/commingsoon",
+    buttonText : "View On GitHub "
   },
 ];
 
@@ -121,45 +122,45 @@ export const EXPERIENCES = [
 
 export const TESTIMONIALS = [
   {
-    name: "Sarah Johnson",
-    title: "Frontend Engineer, Google",
+    name: "John Doe",
+    title: "CEO, TechSolutions",
     feedback:
-      "Jason is one of the most talented developers I've had the pleasure of working with. His skills in frontend development are unparalleled, and his ability to solve complex problems with ease is truly impressive. His leadership and communication make him a standout developer in any team.",
+      "Sabir is an exceptional developer with a keen eye for detail. His ability to deliver high-quality projects on time is impressive, and his expertise in the MERN stack made a significant impact on our latest project., and his ability to solve complex problems with ease is truly impressive. His leadership and communication make him a standout developer in any team.",
     image: person1,
   },
   {
-    name: "Michael Anderson",
-    title: "Product Manager, Facebook",
+    name: "Rana M.Ajmal",
+    title: "CEO, NexcusBerry Training",
     feedback:
-      "Jason was instrumental in driving our product forward. His keen eye for detail and ability to work cross-functionally made him an invaluable asset. He consistently delivers top-quality work and elevates the projects he's involved in. He’s a natural leader, and his expertise in frontend technologies is outstanding.",
+      "Working with Sabir was an amazing experience. His understanding of full-stack development and his eagerness to learn and grow make him a standout in the industry.",
     image: person2,
   },
   {
     name: "Emily Davis",
     title: "Lead Designer, Amazon",
     feedback:
-      "Working with Jason has been a phenomenal experience. His deep understanding of both design and development allowed us to push the boundaries of what we could achieve. His creative problem-solving abilities and commitment to quality are second to none.",
+      "Sabir's ability to translate complex requirements into intuitive, functional solutions is unmatched. He’s highly skilled in React and Node.js, making him a valuable asset to any team.",
     image: person3,
   },
   {
-    name: "David Lee",
-    title: "Senior Developer, Microsoft",
+    name: "Ali Khan",
+    title: "Lead Developer, Ehunar",
     feedback:
-      "Jason's contribution to our team was nothing short of amazing. His technical knowledge, combined with his passion for creating user-friendly and scalable applications, made a significant impact on the success of our product. He’s always willing to go the extra mile to ensure the best outcome.",
+      "Sabir is a highly motivated developer with strong technical skills. His ability to solve problems and work collaboratively with the team makes him a joy to work with.",
     image: person4,
   },
   {
-    name: "Laura Martinez",
-    title: "CTO, Shopify",
+    name: "Emily Watson",
+    title: " E-commerce Store Owner, USA (Connected via Fiverr)",
     feedback:
-      "Jason brought a level of expertise and professionalism to our team that was greatly appreciated. His focus on scalability and clean code ensured that our platform could handle large traffic loads without compromising performance. His work ethic and collaboration skills are impeccable.",
+      "Sabir delivered a fully functional e-commerce website for my online store. His communication was smooth, and the project was completed faster than expected with amazing quality. Highly recommended!",
     image: person5,
   },
   {
-    name: "Chris Brown",
-    title: "Co-founder, Stripe",
+    name: "Liam Carter",
+    title: "Tech Consultant, UK (Connected via LinkedIn)",
     feedback:
-      "Jason combines technical proficiency with excellent leadership skills. He was a key part of our success, helping us build a robust and scalable product. His attention to detail and ability to manage teams made him an invaluable part of the company.",
+      "I reached out to Sabir through LinkedIn for a web maintenance task. He not only fixed the issues quickly but also optimized the performance of our web app. A true professional!",
     image: person6,
   },
 ];
