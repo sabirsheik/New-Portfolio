@@ -56,7 +56,7 @@ export const PROJECTS = [
     name: "KFC Clone",
     description:
       "A static KFC clone website replicating the original design and layout for practice and presentation purposes.",
-    image: "https://www.google.com/imgres?q=kfc%20clone%20pic&imgurl=https%3A%2F%2Fuser-images.githubusercontent.com%2F103980322%2F207100926-cf62dda3-2beb-492d-87f9-53d6689bb0c6.png&imgrefurl=https%3A%2F%2Fgithub.com%2Fiesparag%2FKFC-CLONE&docid=5QXXRFXluNTecM&tbnid=bXWlOl6ADBib1M&vet=12ahUKEwid7u6Z69uMAxVsiv0HHSjnAPkQM3oFCIEBEAA..i&w=1333&h=603&hcb=2&ved=2ahUKEwid7u6Z69uMAxVsiv0HHSjnAPkQM3oFCIEBEAA",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxitPAuj1fO3AjlVtg27fBcQbMb6ekGxvIKA&s",
     link: "fc-project-sage.vercel.app",
     buttonText : "View KFC Clone"
   },
