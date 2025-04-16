@@ -62,7 +62,7 @@ const Project = () => {
                   rel="noopener noreferrer"
                   className="bg-white text-stone-900 rounded-full py-2 px-4 text-center"
                 >
-                  View On GitHub
+                  {project.buttonText}
                 </a>
               </div>
             </div>
