@@ -34,21 +34,21 @@ export const PROJECTS = [
   {
     name: "Empolyee Management Tool",
     description: "A powerful tool to efficiently manage employee records, roles, attendance, and performance in a centralized system.",
-    image: projects1,
+    image: "https://i.postimg.cc/mZX3J035/1-1.png",
     link: "https://github.com/sabirsheik/commingsoon",
     buttonText : "View On GitHub"
   },
   {
     name: "Shoe Company",
     description: "A stylish and dynamic landing page designed to showcase a shoe company's latest collections and boost online sales.",
-    image: projects2,
+    image: "https://i.postimg.cc/pTg8CnnY/abc.jpg",
     link: "https://01-the-shoe-company.vercel.app/",
     buttonText : "View Landing Page"
   },
   {
     name: "3D Animated Portfolio",
     description: "A visually captivating 3D animated portfolio showcasing skills, projects, and creativity in an interactive experience.",
-    image: projects3,
+    image: "https://i.postimg.cc/FKX00S3y/bbc.avif",
     link: "https://3-d-animated-portfolio-tau.vercel.app/",
     buttonText : "View 3D Portfolio"
   },
@@ -70,7 +70,7 @@ export const PROJECTS = [
   {
     name: "E-Commerce Application",
     description: "An e-commerce application is a platform that enables users to buy and sell products or services online with features like product listings, shopping carts, and secure payment processing.",
-    image: projects6,
+    image: "https://i.postimg.cc/NjGNm1x3/1.png",
     link: "https://github.com/sabirsheik/commingsoon",
     buttonText : "View On GitHub "
   },
