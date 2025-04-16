@@ -63,7 +63,7 @@ export const PROJECTS = [
   {
     name: "MERN Application",
     description: "A full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) for seamless frontend and backend integration.",
-    image: projects5,
+    image: "https://www.docker.com/app/uploads/2022/09/Docker_blog_MERN_Stack_Featured_image_650x650_v1.png",
     link: "https://github.com/sabirsheik/commingsoon",
     buttonText : "View On GitHub"
   },
